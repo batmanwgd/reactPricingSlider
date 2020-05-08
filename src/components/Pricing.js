@@ -4,41 +4,75 @@ class Pricing extends React.Component {
   state = {
     priceInputValue: "1",
     priceInput: {
-      0: "1,000",
-      1: "1,250",
-      2: "1,500",
-      3: "2,000",
-      4: "2,500",
-      5: "3,500",
-      6: "6,000",
-      7: "15,000",
-      8: "50,000",
-      9: "50,000+"
+      0: "Basic",
+      1: "Enterprise+",
+      2: "Enterprise+ CRM Edition",
+      3: "Gainsight Edition"
     },
     priceOutput: {
       plan1: {
-        0: ["", "Free", ""],
-        1: ["$", "13", "/m"],
-        2: ["$", "17", "/m"],
-        3: ["$", "21", "/m"],
-        4: ["$", "25", "/m"],
-        5: ["$", "42", "/m"],
-        6: ["$", "58", "/m"],
-        7: ["$", "117", "/m"],
-        8: ["$", "208", "/m"],
-        9: ["", "Contact Us", ""]
+        0: ["$", "1,500", "/m"],
+        1: ["$", "5,000", "/m"],
+        2: ["$", "10,000", "/m"],
+        3: ["$", "10,000+", "/m"]
       },
       plan2: {
-        0: ["$", "13", "/m"],
-        1: ["$", "17", "/m"],
-        2: ["$", "21", "/m"],
-        3: ["$", "25", "/m"],
-        4: ["$", "42", "/m"],
-        5: ["$", "58", "/m"],
-        6: ["$", "117", "/m"],
-        7: ["$", "208", "/m"],
-        8: ["$", "333", "/m"],
-        9: ["", "Contact Us", ""]
+        0: ["", "Contact Us", ""],
+        1: ["", "Contact Us", ""],
+        2: ["", "Contact Us", ""],
+        3: ["", "Contact Us", ""]
+      },
+      baseFeatures: {
+        a: {
+          0: "Custom Catalog or Portal",
+          1: "CRM Integration",
+          2: "Guided Buying & Selling",
+          3: "Onboard Delivery Partners"
+        },
+        b: {
+          0: "15 Application Users",
+          1: "Data Push & Pull",
+          2: "Catalog & Portal Integration",
+          3: "Task Delegation" //assign work
+        },
+        c: {
+          0: "API and Catalog Hosting", //access customer success
+          1: "Leverage Existing Logic",
+          2: "API Integration Library", //access customer success & integration library
+          3: "Progress Management/Dashboard"
+        },
+        d: {
+          0: "Dedicated CSM",
+          1: "",
+          2: "",
+          3: "Delivery Tool Integration"
+        }
+      },
+      isChecked: {
+        a: {
+          0: "is-checked",
+          1: "is-checked",
+          2: "is-checked",
+          3: "is-checked"
+        },
+        b: {
+          0: "is-checked",
+          1: "is-checked",
+          2: "is-checked",
+          3: "is-checked"
+        },
+        c: {
+          0: "is-checked",
+          1: "is-checked",
+          2: "is-checked",
+          3: "is-checked"
+        },
+        d: {
+          0: "is-checked",
+          1: "",
+          2: "",
+          3: "is-checked"
+        }
       }
     }
   };
@@ -71,8 +105,9 @@ class Pricing extends React.Component {
     const thumbOffset = this.thumbSize * multiplier;
     const priceInputOffset =
       (this.thumbSize - this.sliderValue.current.clientWidth) / 2;
-    this.sliderValue.current.style.left =
-      input.clientWidth * multiplier - thumbOffset + priceInputOffset + "px";
+    this.sliderValue.current.style.left = `${input.clientWidth * multiplier -
+      thumbOffset +
+      priceInputOffset}px`;
   };
 
   getPricingData = (obj, pos) => {
@@ -86,7 +121,7 @@ class Pricing extends React.Component {
       <div className="pricing">
         <div className="pricing-slider center-content">
           <label className="form-slider">
-            <span>How many users do you have?</span>
+            <span>What Base Package Matches Your Service Needs?</span>
             <input
               type="range"
               ref={this.slider}
@@ -104,7 +139,9 @@ class Pricing extends React.Component {
             <div className="pricing-item-inner">
               <div className="pricing-item-content">
                 <div className="pricing-item-header center-content">
-                  <div className="pricing-item-title">Basic</div>
+                  <div className="pricing-item-title">
+                    {this.getPricingData(this.state.priceInput)}
+                  </div>
                   <div className="pricing-item-price">
                     <span className="pricing-item-price-currency">
                       {this.getPricingData(this.state.priceOutput.plan1, 0)}
@@ -117,11 +154,42 @@ class Pricing extends React.Component {
                 </div>
                 <div className="pricing-item-features">
                   <ul className="pricing-item-features-list">
-                    <li className="is-checked">Excepteur sint occaecat</li>
-                    <li className="is-checked">Excepteur sint occaecat</li>
-                    <li className="is-checked">Excepteur sint occaecat</li>
-                    <li>Excepteur sint occaecat</li>
-                    <li>Excepteur sint occaecat</li>
+                    <li
+                      className={this.getPricingData(
+                        this.state.priceOutput.isChecked.a
+                      )}
+                    >
+                      {this.getPricingData(
+                        this.state.priceOutput.baseFeatures.a
+                      )}
+                    </li>
+                    <li
+                      className={this.getPricingData(
+                        this.state.priceOutput.isChecked.b
+                      )}
+                    >
+                      {this.getPricingData(
+                        this.state.priceOutput.baseFeatures.b
+                      )}
+                    </li>
+                    <li
+                      className={this.getPricingData(
+                        this.state.priceOutput.isChecked.c
+                      )}
+                    >
+                      {this.getPricingData(
+                        this.state.priceOutput.baseFeatures.c
+                      )}
+                    </li>
+                    <li
+                      className={this.getPricingData(
+                        this.state.priceOutput.isChecked.d
+                      )}
+                    >
+                      {this.getPricingData(
+                        this.state.priceOutput.baseFeatures.d
+                      )}
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -140,7 +208,9 @@ class Pricing extends React.Component {
             <div className="pricing-item-inner">
               <div className="pricing-item-content">
                 <div className="pricing-item-header center-content">
-                  <div className="pricing-item-title">Advanced</div>
+                  <div className="pricing-item-title">
+                    I Need All That and More!
+                  </div>
                   <div className="pricing-item-price">
                     <span className="pricing-item-price-currency">
                       {this.getPricingData(this.state.priceOutput.plan2, 0)}
@@ -153,11 +223,11 @@ class Pricing extends React.Component {
                 </div>
                 <div className="pricing-item-features">
                   <ul className="pricing-item-features-list">
-                    <li className="is-checked">Excepteur sint occaecat</li>
-                    <li className="is-checked">Excepteur sint occaecat</li>
-                    <li className="is-checked">Excepteur sint occaecat</li>
-                    <li className="is-checked">Excepteur sint occaecat</li>
-                    <li className="is-checked">Excepteur sint occaecat</li>
+                    <li className="">Excepteur sint occaecat</li>
+                    <li className="">Excepteur sint occaecat</li>
+                    <li className="">Excepteur sint occaecat</li>
+                    <li className="">Excepteur sint occaecat</li>
+                    <li className="">Excepteur sint occaecat</li>
                   </ul>
                 </div>
               </div>
