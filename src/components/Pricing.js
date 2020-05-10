@@ -242,6 +242,330 @@ class Pricing extends React.Component {
             </div>
           </div>
         </div>
+
+        <div class="container margin_60_35">
+          <div class="row">
+            <div class="col-lg-8">
+              <h3>Choose Your Add-Ons.</h3>
+              <p>
+                Select from one of the add-ons listed below to generate an
+                estimated cost sheet.
+              </p>
+              <div>
+                <div id="message-contact" />
+                <form
+                  method="post"
+                  action="assets/contact.php"
+                  id="contactform"
+                >
+                  <div class="row">
+                    <div class="col-md-6 col-sm-6">
+                      <div class="form-group">
+                        <h5>Classification Group A</h5>
+                        <label for="addon1">Additional Item #1</label>
+                        <select
+                          class="form-control"
+                          id="name_contact"
+                          name="addon1"
+                          placeholder="Solomon"
+                        >
+                          <option value="addonSel" selected>
+                            Select an item
+                          </option>
+                          <option value="addonA">Add-on A</option>
+                          <option value="addonB">Add-on B</option>
+                          <option value="addonC">Add-on C</option>
+                        </select>
+                        <br />
+                        <label for="addon2">Additional Item #2</label>
+                        <select
+                          class="form-control"
+                          id="name_contact"
+                          name="addon2"
+                          placeholder="Solomon"
+                        >
+                          <option value="addonSel" selected>
+                            Select an item
+                          </option>
+                          <option value="addonA">Add-on A</option>
+                          <option value="addonB">Add-on B</option>
+                          <option value="addonC">Add-on C</option>
+                        </select>
+                        <br />
+                        <label for="addon1">Additional Item #3</label>
+                        <select
+                          class="form-control"
+                          id="name_contact"
+                          name="addon1"
+                          placeholder="Solomon"
+                        >
+                          <option value="addonSel" selected>
+                            Select an item
+                          </option>
+                          <option value="addonA">Add-on A</option>
+                          <option value="addonB">Add-on B</option>
+                          <option value="addonC">Add-on C</option>
+                        </select>
+                        <br />
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                      <h5>Classification Group B</h5>
+                      <label for="addon1">Additional Item #1</label>
+                      <select
+                        class="form-control"
+                        id="name_contact"
+                        name="addon1"
+                        placeholder="Solomon"
+                      >
+                        <option value="addonSel" selected>
+                          Select an item
+                        </option>
+                        <option value="addonA">Add-on A</option>
+                        <option value="addonB">Add-on B</option>
+                        <option value="addonC">Add-on C</option>
+                      </select>
+                      <br />
+                      <label for="addon2">Additional Item #2</label>
+                      <select
+                        class="form-control"
+                        id="name_contact"
+                        name="addon2"
+                        placeholder="Solomon"
+                      >
+                        <option value="addonSel" selected>
+                          Select an item
+                        </option>
+                        <option value="addonA">Add-on A</option>
+                        <option value="addonB">Add-on B</option>
+                        <option value="addonC">Add-on C</option>
+                      </select>
+                      <br />
+                      <label for="addon1">Additional Item #3</label>
+                      <select
+                        class="form-control"
+                        id="name_contact"
+                        name="addon1"
+                        placeholder="Solomon"
+                      >
+                        <option value="addonSel" selected>
+                          Select an item
+                        </option>
+                        <option value="addonA">Add-on A</option>
+                        <option value="addonB">Add-on B</option>
+                        <option value="addonC">Add-on C</option>
+                      </select>
+                      <br />
+                    </div>
+                  </div>
+                  <div class="row">
+                    <h5>Classification Group C</h5>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-4 col-sm-4">
+                      <input
+                        type="radio"
+                        id="male"
+                        name="gender"
+                        value="male"
+                      />
+                      <label for="male">Add-on A</label>
+                      <br />
+                      <input
+                        type="radio"
+                        id="female"
+                        name="gender"
+                        value="female"
+                      />
+                      <label for="female">Add-on B</label>
+                      <br />
+                      <input
+                        type="radio"
+                        id="other"
+                        name="gender"
+                        value="other"
+                      />
+                      <label for="other">Add-on C</label>
+                      <br />
+                      <br />
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                      <input
+                        type="radio"
+                        id="male"
+                        name="gender"
+                        value="male"
+                      />
+                      <label for="male">Add-on A</label>
+                      <br />
+                      <input
+                        type="radio"
+                        id="female"
+                        name="gender"
+                        value="female"
+                      />
+                      <label for="female">Add-on B</label>
+                      <br />
+                      <input
+                        type="radio"
+                        id="other"
+                        name="gender"
+                        value="other"
+                      />
+                      <label for="other">Add-on C</label>
+                      <br />
+                      <br />
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                      <input
+                        type="radio"
+                        id="male"
+                        name="gender"
+                        value="male"
+                      />
+                      <label for="male">Add-on A</label>
+                      <br />
+                      <input
+                        type="radio"
+                        id="female"
+                        name="gender"
+                        value="female"
+                      />
+                      <label for="female">Add-on B</label>
+                      <br />
+                      <input
+                        type="radio"
+                        id="other"
+                        name="gender"
+                        value="other"
+                      />
+                      <label for="other">Add-on C</label>
+                      <br />
+                      <br />
+                    </div>
+                  </div>
+                  <div class="row">
+                    <p>
+                      Vestibulum est ex, eleifend tempor dapibus id, scelerisque
+                      ac mauris. Nulla facilisis consequat elit vitae aliquam.
+                      Mauris in risus et magna malesuada fermentum.
+                    </p>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-4 col-md-4">
+                      <p>
+                        <input
+                          type="submit"
+                          value="Generate Cost Sheet"
+                          class="btn_1 add_bottom_15"
+                          id="submit-contact"
+                        />
+                      </p>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                      <p>
+                        <input
+                          type="submit"
+                          value="Generate MSA"
+                          class="btn_1 add_bottom_15"
+                          id="submit-contact"
+                        />
+                      </p>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <aside class="col-lg-4">
+              <div class="box_style_2">
+                <h4>Estimated Cost Sheet.</h4>
+                <table class="cost-sheet-tally">
+                  <thead>
+                    <tr>
+                      <td width="200">
+                        <b>
+                          <u>Add-On</u>
+                        </b>
+                      </td>
+                      <td>
+                        <b>
+                          <u>Est. Cost</u>
+                        </b>
+                      </td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Base Package</td>
+                      <td>$3,000</td>
+                    </tr>
+                    <tr>
+                      <td>Add Item #1</td>
+                      <td>$3,000</td>
+                    </tr>
+                    <tr>
+                      <td>Add Item #2</td>
+                      <td>$1,000</td>
+                    </tr>
+                    <tr>
+                      <td>Add Item #3</td>
+                      <td>$2,000</td>
+                    </tr>
+                    <tr>
+                      <td>Add Item #4</td>
+                      <td>$5,000</td>
+                    </tr>
+                    <tr>
+                      <td>Add Item #5</td>
+                      <td>$7,000</td>
+                    </tr>
+                    <tr>
+                      <td>Add Item #6</td>
+                      <td>$2,000</td>
+                    </tr>
+                    <tr>
+                      <td>Add Item #7</td>
+                      <td>$4,000</td>
+                    </tr>
+                    <tr>
+                      <td>Add Item #8</td>
+                      <td>$12,000</td>
+                    </tr>
+                    <tr>
+                      <td>Add Item #9</td>
+                      <td>$8,000</td>
+                    </tr>
+                    <tr>
+                      <td>Add Item #10</td>
+                      <td>$9,000</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <em>
+                          <b>Estimated Total</b>
+                        </em>
+                      </td>
+                      <td>
+                        <em>
+                          <b>$6,000 /m</b>
+                        </em>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <hr class="styled" />
+                <h6>Pricing Disclaimers.</h6>
+                <p>
+                  Although the information in this price list is presented in
+                  good faith and believed to be correct at the time of printing,
+                  IQC makes no representations or warranties as to the
+                  completeness or accuracy of the information. IQC has no
+                  liability for any errors or omissions in the materials.
+                </p>
+              </div>
+            </aside>
+          </div>
+        </div>
       </div>
     );
   }
